@@ -217,6 +217,5 @@ pip-log.txt
 
 vendor/
 ad version/
-index.php
 composer.lock
 composer.json
