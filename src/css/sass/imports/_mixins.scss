@@ -1,0 +1,22 @@
+/*
+* Written By Chris Allen
+* Contact:  	650-395-8594
+* Email:		chris@chrisballen.com
+*
+* Application:	TicTacToe Game
+*/
+
+//------MIXINS-----------
+
+@mixin transition_all() {
+    -webkit-transition: all 0.3s ease;                  
+    -moz-transition: all 0.3s ease;                 
+    -o-transition: all 0.3s ease;   
+    -ms-transition: all 0.3s ease;          
+    transition: all 0.3s ease;
+}
+
+@mixin grey_background($position) {
+	background: #eee url('../img/noise-pattern-with-subtle-cross-lines.png') repeat; 
+   
+}

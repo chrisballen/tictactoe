@@ -1,0 +1,186 @@
+/*
+* Written By Chris Allen
+* Contact:  	650-395-8594
+* Email:		chris@chrisballen.com
+*
+* Application:	TicTacToe Game
+*/
+
+.board-container {
+	  margin: auto;
+	  padding:15px;
+	  background-color:#FFF;
+	  width:85%;
+	  border-bottom:2px solid #ddd;
+	  border-left:2px solid #ddd;
+	  border-right:2px solid #ddd;
+	
+	#game-board {
+		width: 450px;
+		margin: auto;
+		height: 362px;
+		@include transition_all();
+		ul {
+			li {
+				width:150px;
+				height:120px;
+				display: inline;
+  				float: left;
+				
+				&.first {
+					border-right:2px solid #A5A5A5;
+				}
+				&.last {
+					border-left:2px solid #A5A5A5;
+				}
+				&.top-row {
+					border-bottom:2px solid #A5A5A5;
+				}
+				&.bottom-row {
+					border-top:2px solid #A5A5A5;
+				}
+				&.player-one {
+
+					&.taken {
+						background-repeat: no-repeat;
+				        background-image:url('../img/sprite.png');
+				        background-position: -276px 0px !important;
+					}
+					&.winner {
+						background-repeat: no-repeat;
+				        background-image:url('../img/sprite.png');
+				        background-position: -427px 0px !important;
+					}					
+					
+				}
+				&.player-two {
+					&.taken {
+						background-repeat: no-repeat;
+				        background-image:url('../img/sprite.png');
+				        background-position: -279px -135px !important;
+					}
+					&.winner {
+						background-repeat: no-repeat;
+				        background-image:url('../img/sprite.png');
+				        background-position: -430px -135px  !important;
+					}						
+				}		
+			}
+		}
+		&.player-one.active {
+			li {
+				&:hover {
+					background-repeat: no-repeat;
+			        background-image:url('../img/sprite.png');
+			        background-position: -127px 0px;
+				}
+
+			}
+		}
+		&.player-two.active {
+			li {
+				&:hover {
+					background-repeat: no-repeat;
+			        background-image:url('../img/sprite.png');
+			        background-position: -131px -135px;
+				}
+
+			}
+		}		
+	}
+}
+.players-container {
+	width: 115px;
+	margin: auto;
+	margin-top: 50px;
+	opacity: 1;
+	@include transition_all();
+	
+	&.disabled {
+	  opacity: 0.3;
+	}
+	.monster {
+		height: 140px;
+  		width: 115px;
+		background-repeat: no-repeat;
+        background-image:url('../img/sprite.png');
+        background-position: 9999px 9999px;
+		
+		&.player-one {
+			background-position: 8px -4px;
+		}
+		&.player-two {
+			background-position: 8px -142px;
+		}
+	}
+	.name {
+		font-size: 16px;
+  		margin-top: 7px;
+  		text-align:center;
+	}
+	
+	.piece-identifier {
+		width: 41px;
+		margin: auto;
+		margin-top: 20px;
+		height: 44px;
+  		background-size: 610%;
+		
+		background-repeat: no-repeat;
+        background-image:url('../img/sprite.png');
+        background-position: 9999px 9999px;
+        
+        &.player-one {
+			background-position: -125px 0px;
+		}
+		&.player-two {
+			background-position: -125px -58px;
+		}
+
+	}
+}
+.choose-first-move {
+  width: 500px;
+  margin: auto;
+	h5 {
+		text-align:center;
+		margin:15px 0px;
+	}
+	ul {
+	  	margin: auto;
+  		width: 287px;
+		li {
+			@include transition_all();
+			cursor:pointer;
+			float:left;
+			
+			&:hover {
+				opacity:0.6;
+			}
+		}
+	}
+	.player{
+		height: 140px;
+  		width: 115px;
+		background-repeat: no-repeat;
+        background-image:url('../img/sprite.png');
+        background-position: 9999px 9999px;
+
+        &.one {
+			background-position: 8px -4px;
+			margin-right: 39px;
+		}
+		&.two {
+			background-position: 8px -142px;
+		}
+	}
+}
+.play-again {
+	text-align:center;
+	h4 {
+		text-align:center;
+		cursor:pointer;
+		color:red;
+		  display: inline;
+	}
+}
